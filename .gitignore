@@ -1,0 +1,6 @@
+# Ignore virtual environment
+ml_01/
+venv/
+*.pyc
+__pycache__/
+ml_project_01.egg-info
