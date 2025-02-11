@@ -1,7 +1,7 @@
 # Handling the exceptions 
 import sys
 import logging
-from logger import LOG_FILE_PATH  # Import logging setup
+from src.logger import LOG_FILE_PATH  # Import logging setup
 
 def error_msg_detail(error,error_detail:sys):
     _,_,exc_tb=error_detail.exc_info()
@@ -10,7 +10,7 @@ def error_msg_detail(error,error_detail:sys):
 
     return error_message
 
-class CustomeException(Exception):
+class CustomException(Exception):
     def __init__(self, error_message,error_detail:sys):
         super().__init__(error_message)
         self.error_message=error_msg_detail(error_message,error_detail=error_detail)
